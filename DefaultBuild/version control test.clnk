@@ -1,0 +1,21 @@
+-input=DefaultBuild\boot.obj
+-input=DefaultBuild\cstart.obj
+-input=DefaultBuild\main.obj
+-debug
+-nocompress
+-NOOPtimize
+-output="DefaultBuild\version control test.abs"
+-library=v850e3v5\rhf8n.lib
+-library=v850e3v5\libmalloc.lib
+-list="DefaultBuild\version control test.map"
+-show=symbol,total_size
+-start=RESET,EIINTTBL/0,.const,.INIT_DSEC.const,.INIT_BSEC.const,.text,.data/00008000,.data.R,.bss,.stack.bss/FED80000
+-rom=.data=.data.R
+-memory=high
+-nologo
+-end
+-input="DefaultBuild\version control test.abs"
+-output="DefaultBuild\version control test.mot"
+-form=stype
+-exit
+

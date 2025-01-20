@@ -1,0 +1,205 @@
+Renesas Optimizing Linker (W3.06.00 )             20-Jan-2025 15:42:54
+
+*** Options ***
+
+-subcommand=DefaultBuild\version control test.clnk
+-input=DefaultBuild\boot.obj
+-input=DefaultBuild\cstart.obj
+-input=DefaultBuild\main.obj
+-debug
+-nocompress
+-NOOPtimize
+-output="DefaultBuild\version control test.abs"
+-library=v850e3v5\rhf8n.lib
+-library=v850e3v5\libmalloc.lib
+-list="DefaultBuild\version control test.map"
+-show=symbol,total_size
+-start=RESET,EIINTTBL/0,.const,.INIT_DSEC.const,.INIT_BSEC.const,.text,.data/00008000,.data.R,.bss,.stack.bss/FED80000
+-rom=.data=.data.R
+-memory=high
+-nologo
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+RESET
+                                  00000000  000001f7       1f8   200
+EIINTTBL
+                                  00000200  000009ff       800   200
+.const
+                                  00008000  00008000         0   4
+.INIT_DSEC.const
+                                  00008000  0000800b         c   4
+.INIT_BSEC.const
+                                  0000800c  00008013         8   4
+.text
+                                  00008014  000081af       19c   2
+.data
+                                  000081b0  000081b0         0   4
+.data.R
+                                  fed80000  fed80000         0   4
+.bss
+                                  fed80000  fed80000         0   4
+.stack.bss
+                                  fed80000  fed801ff       200   4
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  00000200 Byte(s)
+ROMDATA SECTION:  00000814 Byte(s)
+PROGRAM SECTION:  00000394 Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=RESET
+FILE=DefaultBuild\boot.obj
+                                  00000000  000001f7       1f8
+
+SECTION=EIINTTBL
+FILE=DefaultBuild\boot.obj
+                                  00000200  000009ff       800
+
+SECTION=.INIT_DSEC.const
+FILE=DefaultBuild\cstart.obj
+                                  00008000  0000800b         c
+
+SECTION=.INIT_BSEC.const
+FILE=DefaultBuild\cstart.obj
+                                  0000800c  00008013         8
+
+SECTION=.text
+FILE=DefaultBuild\boot.obj
+                                  00008014  0000808b        78
+  _Dummy
+                                  00008014         0   none ,l         * 
+  _Dummy_EI
+                                  00008016         0   none ,l         * 
+  __start
+                                  00008018         0   none ,l         * 
+  _hdwinit
+                                  00008068         0   none ,l         * 
+  _zeroclr4
+                                  0000807e         0   none ,l         * 
+FILE=DefaultBuild\cstart.obj
+                                  0000808c  000080fd        72
+  __cstart
+                                  0000808c         0   none ,g         * 
+  _exit
+                                  000080fc         0   none ,l         * 
+FILE=DefaultBuild\main.obj
+                                  000080fe  000080ff         2
+  _main
+                                  000080fe         2   func ,g         * 
+FILE=initsct_rh
+                                  00008100  000081af        b0
+  __INITSCT_RH
+                                  00008100         0   none ,g         * 
+
+SECTION=.stack.bss
+FILE=DefaultBuild\cstart.obj
+                                  fed80000  fed801ff       200
+  _stacktop
+                                  fed80200         0   none ,l         * 
+
+Absolute value symbols
+FILE=rlink_generates_01
+  __gp_data
+                                  00000000         0   none ,g         * 
+  __ep_data
+                                  00000000         0   none ,g         * 
+FILE=rlink_generates_02
+  __s.text
+                                  00008014         0   none ,g         * 
+  __e.text
+                                  000081b0         0   none ,g         * 
+  __S_text
+                                  00008014         0   none ,g         * 
+  __E_text
+                                  000081b0         0   none ,g         * 
+  __sRESET
+                                  00000000         0   none ,g         * 
+  __eRESET
+                                  000001f8         0   none ,g         * 
+  __SRESET
+                                  00000000         0   none ,g         * 
+  __ERESET
+                                  000001f8         0   none ,g         * 
+  __sEIINTTBL
+                                  00000200         0   none ,g         * 
+  __eEIINTTBL
+                                  00000a00         0   none ,g         * 
+  __SEIINTTBL
+                                  00000200         0   none ,g         * 
+  __EEIINTTBL
+                                  00000a00         0   none ,g         * 
+  __s.data
+                                  000081b0         0   none ,g         * 
+  __e.data
+                                  000081b0         0   none ,g         * 
+  __s.data.R
+                                  fed80000         0   none ,g         * 
+  __e.data.R
+                                  fed80000         0   none ,g         * 
+  __S_data
+                                  000081b0         0   none ,g         * 
+  __E_data
+                                  000081b0         0   none ,g         * 
+  __S_data_R
+                                  fed80000         0   none ,g         * 
+  __E_data_R
+                                  fed80000         0   none ,g         * 
+  __s.bss
+                                  fed80000         0   none ,g         * 
+  __e.bss
+                                  fed80000         0   none ,g         * 
+  __S_bss
+                                  fed80000         0   none ,g         * 
+  __E_bss
+                                  fed80000         0   none ,g         * 
+  __s.const
+                                  00008000         0   none ,g         * 
+  __e.const
+                                  00008000         0   none ,g         * 
+  __S_const
+                                  00008000         0   none ,g         * 
+  __E_const
+                                  00008000         0   none ,g         * 
+  __s.stack.bss
+                                  fed80000         0   none ,g         * 
+  __e.stack.bss
+                                  fed80200         0   none ,g         * 
+  __S_stack_bss
+                                  fed80000         0   none ,g         * 
+  __E_stack_bss
+                                  fed80200         0   none ,g         * 
+  __s.INIT_DSEC.const
+                                  00008000         0   none ,g         * 
+  __e.INIT_DSEC.const
+                                  0000800c         0   none ,g         * 
+  __S_INIT_DSEC_const
+                                  00008000         0   none ,g         * 
+  __E_INIT_DSEC_const
+                                  0000800c         0   none ,g         * 
+  __s.INIT_BSEC.const
+                                  0000800c         0   none ,g         * 
+  __e.INIT_BSEC.const
+                                  00008014         0   none ,g         * 
+  __S_INIT_BSEC_const
+                                  0000800c         0   none ,g         * 
+  __E_INIT_BSEC_const
+                                  00008014         0   none ,g         * 
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
